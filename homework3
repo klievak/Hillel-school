@@ -1,0 +1,36 @@
+"""
+В школі вирішили набрати три нові математичні класи. Оскільки заняття з математики вони
+проходять одночасно, було вирішено виділити кабінет кожному класу і купити в них нові парти.
+За кожною партою може сидіти не більше двох учнів. Відомо кількість учнів у кожному із трьох класів.
+Скільки всього потрібно закупити парт, щоб їх вистачило на всіх учнів?
+Програма отримує на вхід три натуральні числа: кількість учнів у кожному з трьох класів.
+p.s. Використовувати лише арифметичні оператори. (Підказка: знадобляться // , + та %)
+"""
+
+# user's input
+group_a = input("Number of schoolchildren in the group A: ")
+group_b = input("Number of schoolchildren in the group B: ")
+group_c = input("Number of schoolchildren in the group C: ")
+
+# check for non-numerical entries
+try:
+    group_a = int(group_a)
+    group_b = int(group_b)
+    group_c = int(group_c)
+except:
+    print("\nError: wrong entry")
+    exit()
+
+# check for negative numbers
+if group_a < 0 or group_b < 0 or group_c < 0:
+    print('\nError: wrong entry')
+    exit()
+
+# number of desks per group
+desks_a = (group_a / 2) + (group_a % 2)
+desks_b = (group_b / 2) + (group_b % 2)
+desks_c = (group_c / 2) + (group_c % 2)
+
+# total desks for schoolchildren
+total_desks = (int(desks_a) + int(desks_b) + int(desks_c))
+print('\nQuantity of desks to buy:', total_desks)

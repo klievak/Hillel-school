@@ -1,0 +1,29 @@
+"""
+n школярів ділять k яблук порівну, залишок, що не ділиться, залишається в кошику.
+Скільки яблук дістанеться кожному школяру? Скільки яблук залишиться у кошику?
+Програма отримує на вхід числа n і k та повинна вивести кількість яблук (два числа).
+p.s. Використовувати лише арифметичні оператори (Підказка: знадобляться // та %)
+"""
+
+#user's input
+apples = input('Enter a number of apples in the basket: ')
+schoolchildren = input('Enter a number of schoolchildren: ')
+
+# check for non-numerical entries
+try:
+    apples = int(apples)
+    schoolchildren = int(schoolchildren)
+except:
+    print("Error: wrong entry")
+    exit()
+
+# check for negative numbers and division by zero
+if apples < 0 or schoolchildren < 1:
+    print('Error: wrong entry')
+    exit()
+
+# calculations
+share = apples // schoolchildren
+leftover = apples % schoolchildren
+print('\nApples per a schoolchild:', share)
+print('Apples left in the basket:', leftover)

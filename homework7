@@ -1,0 +1,8 @@
+rows = int(input("Enter the number of rows: "))
+sides = rows
+middle = 1
+for i in range(0, rows):
+    line = ("  " * sides) + ("* " * middle)
+    middle = middle + 2
+    sides = sides - 1
+    print(line)

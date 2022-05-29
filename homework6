@@ -1,0 +1,33 @@
+count_entries = 0
+sum_entries = 0
+min_entry = 0
+max_entry = 0
+count_even = 0
+count_odd = 0
+
+entry = int(input("Enter an integer: "))
+
+while entry != 0:
+    count_entries = count_entries + 1
+    sum_entries = sum_entries + entry
+
+    if entry % 2 == 0:
+        count_even = count_even + 1
+    else:
+        count_odd = count_odd + 1
+
+    if entry < min_entry:
+        min_entry = entry
+
+    if entry > max_entry:
+        max_entry = entry
+
+    entry = int(input("Enter an integer: "))
+
+print("Count except zero: ", count_entries)
+print("Sum: ", sum_entries)
+print("Average except zero: ", sum_entries / count_entries)
+print("Min: ", min_entry)
+print("Max: ", max_entry)
+print("Count even: ", count_even)
+print("Count odd: ", count_odd)

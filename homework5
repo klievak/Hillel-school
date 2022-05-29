@@ -1,0 +1,9 @@
+number = 1
+square_number = 1
+max_number = int(input("Enter the number: "))
+while square_number <= max_number:
+    print(square_number, end=" ")
+    number = number + 1
+    square_number = number * number
+    
+print("\nEnd")

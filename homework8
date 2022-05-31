@@ -1,0 +1,18 @@
+import random
+
+group_heights = [random.randint(100, 200) for i in range(7)]
+group_heights.sort(reverse=True)
+print(f"Kids' heights in line without Petya: {group_heights}")
+
+petya_height = int(input("Petya's height in cm: "))
+if petya_height > 200:
+    print("Entered number is out of the scope of the exercise")
+    exit()
+
+for i, e in enumerate(group_heights, 1):
+    if petya_height > e:
+        petya_place = i
+        break
+    else:
+        petya_place = i + 1
+print(f"Petya's place in the line: {petya_place}")

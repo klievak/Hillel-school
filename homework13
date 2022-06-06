@@ -1,0 +1,15 @@
+def multiplication(entry):
+    total_multiple = 1
+    for i in entry:
+        i = int(i)
+        if i == 0:
+            continue
+        else:
+            total_multiple *= i
+    return total_multiple
+
+
+# check if the function works:
+prompt = input("Enter a real number: ")
+check_function = multiplication(prompt)
+print(f"Check ({prompt}) == {check_function}")

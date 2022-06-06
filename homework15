@@ -1,0 +1,18 @@
+def arithmetic(number1, number2, operator):
+    if operator == "+":
+        result = number1 + number2
+    elif operator == "-":
+        result = number1 - number2
+    elif operator == "*":
+        result = number1 * number2
+    elif operator == "/":
+        result = number1 / number2
+    else:
+        result = "Неизвестная операция"
+    return result
+
+
+
+# check if the function works:
+check_function = arithmetic(4, 5, "*")
+print(check_function)

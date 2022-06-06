@@ -1,0 +1,11 @@
+text = "Limiting the required editor window width makes it possible to have several files open side by side and" \
+       " works well when using code review tools that present the two versions in adjacent columns. " 
+
+count = dict()
+words = text.lower().split()
+for word in words:
+    if word not in count:
+        count[word] = 1
+    else:
+        count[word] += 1
+print(count)

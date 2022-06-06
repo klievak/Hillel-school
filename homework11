@@ -18,8 +18,6 @@ print(f"Dictionary 2: {dict2}")
 
 dict3 = dict1.copy() 
 for key in dict2.keys():
-    if key in dict1 and dict2[key] < dict1[key]:
-        pass
-    else:
+    if key not in dict1 or dict2[key] > dict1[key]:   #revised version
         dict3.update({key: dict2[key]})
 print(dict3)

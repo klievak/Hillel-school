@@ -1,0 +1,25 @@
+import string
+import random
+
+dict1 = dict()
+dict2 = dict()
+
+while len(dict1) < 4:
+    key = string.ascii_letters[random.randint(0, 25)]
+    value = random.randint(0, 100)
+    dict1[key] = value
+print(f"Dictionary 1: {dict1}")
+
+while len(dict2) < 4:
+    key = string.ascii_letters[random.randint(0, 25)]
+    value = random.randint(0, 100)
+    dict2[key] = value
+print(f"Dictionary 2: {dict2}")
+
+dict3 = dict1.copy() 
+for key in dict2.keys():
+    if key in dict1 and dict2[key] < dict1[key]:
+        pass
+    else:
+        dict3.update({key: dict2[key]})
+print(dict3)

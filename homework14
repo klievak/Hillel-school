@@ -1,15 +1,11 @@
 def square_parameters(side):
     import math
     side = float(side)
-    perimeter = side * 2
-    square = side * side
-    diagonal = round(math.sqrt(2) * side, 2)
-    parameters = (perimeter, square, diagonal)
-    return(parameters)
+    parameters = (side*2, side*side, round(math.sqrt(2) * side, 2))   # returns perimeter, square, diagonal
+    return parameters
 
 
 # check if the function works:
-
 prompt = input("Square's side in cm: ")
 check_function = square_parameters(prompt)
 print(check_function)
